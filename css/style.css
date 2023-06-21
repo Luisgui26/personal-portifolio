@@ -43,12 +43,13 @@ body{
 }
 
 .header.sticky{
+    transition: .4s;
     background: var(--bg-color);
     box-shadow: 0 .1rem 1rem var(--shadow-color); 
 }
 
 .logo{
-    font-size: 2.5rem;
+    font-size: 3.4rem;
     color: var(--main-color);
     font-weight: bold;
     cursor: default;
@@ -57,10 +58,14 @@ body{
 
 .navbar a{
     position: relative;
-    font-size: 1.7rem;
-    color: var(--main-color);
+    font-size: 2.2rem;
+    color: var(--text-color);
     font-weight: 500;
     margin-right: 3.5rem;
+}
+
+.header.sticky .navbar a.active{
+    color: var(--main-color);
 }
 
 .navbar a.active::before{
@@ -73,11 +78,19 @@ body{
     background: var(--white-color);
 }
 
+.header.sticky .navbar a::before{
+    background: var(--main-color);
+    opacity: .7;
+}
+
 #darkMode-icon{
     font-size: 2.4rem;
-    color: var(--white-color);
+    color: var(--main-color);
     cursor: pointer;
 }
+
+
+
 
 section{
     min-height: 100vh;
@@ -94,19 +107,19 @@ section{
 }
 
 .home-content h3{
-    font-size: 5.2rem;
+    font-size: 4.2rem;
     font-weight: 700;
     line-height: .3;
 }
 
 .home-content h1{
-    font-size: 6.6rem;
+    font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: .3rem;
 }
 
 .home-content p{
-    font-size: 2.6rem;
+    font-size: 2.1rem;
 }
 
 .home-content .social-media a {
@@ -179,3 +192,55 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.abilities{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.abilities h2{
+   margin-bottom: 5rem; 
+}
+
+.abilities .abilities-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.abilities-container .abilities-box{
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    text-align: center;
+    border-top: .6rem solid var(--main-color);
+    border-bottom: .6rem solid var(--main-color);
+    transition: .4s ease;
+}
+
+.abilities-container .abilities-box:hover{
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.abilities-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.abilities-box h3{
+    font-size: 2.6rem;
+    transition: .4s ease;
+}
+
+.abilities-box:hover h3{
+    color: var(--main-color);
+}
+
+.abilities-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
