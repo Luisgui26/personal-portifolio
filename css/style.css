@@ -17,6 +17,7 @@
     --main-color: #754ef9;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
+    --header-light: #8a69f5;
 }
 
 html {
@@ -35,10 +36,15 @@ body{
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: yellowgreen;
+    background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
+}
+
+.header.sticky{
+    background: var(--bg-color);
+    box-shadow: 0 .1rem 1rem var(--shadow-color); 
 }
 
 .logo{
@@ -52,7 +58,7 @@ body{
 .navbar a{
     position: relative;
     font-size: 1.7rem;
-    color: var(--white-color);
+    color: var(--main-color);
     font-weight: 500;
     margin-right: 3.5rem;
 }
@@ -75,7 +81,7 @@ body{
 
 section{
     min-height: 100vh;
-    padding: 10rem 7% 2rem;
+    padding: 10rem 10% 2rem;
 }
 
 .home{
@@ -84,22 +90,23 @@ section{
 }
 
 .home .home-content{
-    max-width: 44rem;
+    max-width: 58rem;
 }
 
 .home-content h3{
-    font-size: 3.2rem;
+    font-size: 5.2rem;
     font-weight: 700;
     line-height: .3;
 }
 
 .home-content h1{
-    font-size: 5.6rem;
+    font-size: 6.6rem;
     font-weight: 700;
+    margin-bottom: .3rem;
 }
 
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 2.6rem;
 }
 
 .home-content .social-media a {
@@ -116,3 +123,59 @@ section{
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
 }
+
+.btn{
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: var(--main-color);
+    border-radius: .6rem;
+    font-size: 1.6rem;
+    box-shadow: 0.2rem .5rem var(--shadow-color);
+    color: var(--white-color);
+    letter-spacing: 1.rem;
+    font-weight: 600;
+    border: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    background: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: red;
+}
+
+.about-img{
+    width: 40vw;
+}
+
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
