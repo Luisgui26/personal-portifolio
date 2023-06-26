@@ -210,17 +210,20 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form action="https://api.staticforms.xyz/submit" method="post">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Addres">
+                <input type="text" name="name" placeholder="Full Name" autocomplete="off">
+                <input type="email" name="email" placeholder="Email Addres" autocomplete="off">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="phone" placeholder="Mobile Number" autocomplete="off">
+                <input type="text" name="subject" placeholder="Email Subject" autocomplete="off">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Messade"></textarea>
+            <textarea type="text" name="message" id="" cols="30" rows="10" placeholder="Your Messade"></textarea>
             <input type="submit" value="Send Message" class="btn">
+
+            <input type="hidden" name="accessKey" value="cebe312e-41d3-48d7-98b5-9a2d12c17ac2"> 
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/thanks.html">           
         </form>
     </section>
 
